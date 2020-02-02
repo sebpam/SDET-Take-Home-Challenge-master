@@ -1,0 +1,29 @@
+{
+  "name": "sdet-take-home-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./specs/*.js --timeout=30000 --reporter=mochawesome --html=false --json=true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/starrett67/SDET-Take-Home-Challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/starrett67/SDET-Take-Home-Challenge/issues"
+  },
+  "homepage": "https://github.com/starrett67/SDET-Take-Home-Challenge#readme",
+  "devDependencies": {
+    "mocha": "^6.2.2"
+  },
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mochawesome": "^4.1.0",
+    "mochawesome-merge": "^4.0.0",
+    "mochawesome-report-generator": "^4.1.0",
+    "supertest": "^4.0.2"
+  }
+}
