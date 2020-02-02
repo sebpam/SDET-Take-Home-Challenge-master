@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./specs/*.js --timeout=30000 --reporter=mochawesome --html=false --json=true"
+    "test": "mocha ./specs/*.js --timeout=30000 --reporter=mochawesome"
   },
   "repository": {
     "type": "git",
