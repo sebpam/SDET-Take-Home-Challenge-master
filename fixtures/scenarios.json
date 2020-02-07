@@ -141,5 +141,43 @@
                 }
             ]                           
         }
+    },
+    "Tampa":{
+        "city":"Tampa",
+        "sku":"7005451p",
+        "zipCode":"33607",
+        "regularHours": {
+            "openTimes": {
+                "0":"0",
+                "1":"1",
+                "2":"1",
+                "3":"1",
+                "4":"1",
+                "5":"1",
+                "6":"1"
+            },
+            "closeTimes": {
+                "0":"1",
+                "1":"2",
+                "2":"2",
+                "3":"2",
+                "4":"2",
+                "5":"2",
+                "6":"2"
+            }
+        },
+        "specialHours": {
+            "isOpen": false,
+            "closeTime": "04/21/2019 11:59 PM",
+            "openTime": "04/21/2019 12:01 AM"
+        },
+        "address1": "1502 N Dale Mabry Hwy",
+        "latitude": 27.95643,
+        "longitude": -82.50586,
+        "phoneNumber": "813-871-5828",
+        "state": "FL",
+        "storeName": "Dale Mabry Showroom",
+        "storeNumber": "217",
+        "zipcode": "33607"   
     }
 }

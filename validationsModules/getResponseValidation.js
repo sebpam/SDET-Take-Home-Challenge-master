@@ -1,36 +1,59 @@
 const expect = require('chai').expect;
 const request = require('../base/restClient')['submitGetRequest'];
 
-let response = [];
-let singlObjFromResp = {};
-let statusCode;
+//let response = [];
+//let singlObjFromResp = {};
+//let statusCode;
 
 const hoursOfOperations = require('../fixtures/hoursOfOperations.json')
 
 module.exports = {
 
-    submitGetRequest: function( scenario ){
+    // submitGetRequest: function( scenario ){
 
-    	it('Should make get call and save response', function( done ){
+    // 	it('Should make get call and save response', function( done ){
     		
-    		const getParams = "?" + "sku="+ scenario.sku + "&zipcode=" + scenario.zipCode;
-            request( getParams, function( err, rsp ){
-            	if( err ){
-            		console.log( err );
-                    done();
-            	} else {
-            		response = rsp.body;
-            		statusCode = rsp.statusCode;
-                    done();
-            	}
-            });
-    	});
-    },
+    // 		const getParams = "?" + "sku="+ scenario.sku + "&zipcode=" + scenario.zipCode;
+    //         request( getParams, function( err, rsp ){
+    //         	if( err ){
+    //         		console.log( err );
+    //                 done();
+    //         	} else {
+    //         		response = rsp.body;
+    //         		statusCode = rsp.statusCode;
+    //                 done();
+    //         	}
+    //         });
+    // 	});
+    // },
 
     runSuccessAssertions: function( scenario ){
 
-    	this.submitGetRequest( scenario );
+    	//this.submitGetRequest( scenario );
+
         let cityName = scenario.city;
+
+        let response = [];
+        let singlObjFromResp = {};
+        let statusCode;
+
+
+        it('Should make get call and save response', function( done ){
+            
+            const getParams = "?" + "sku="+ scenario.sku + "&zipcode=" + scenario.zipCode;
+            request( getParams, function( err, rsp ){
+                if( err ){
+                    console.log( err );
+                    done();
+                } else {
+                    response = rsp.body;
+                    statusCode = rsp.statusCode;
+                    done();
+                }
+            });
+        });
+
+
  
         it('Should validate all address response obj properties are accordingly returned', function(){
             response.forEach( function( addrObj ){
@@ -66,7 +89,7 @@ module.exports = {
         
         it("Should capture and save specific city object from response", function( done ){
             singlObjFromResp = response.find( function( obj ){
-                return obj.city = cityName;
+                return obj.city === cityName;
             });
             done();
         });
@@ -160,6 +183,27 @@ module.exports = {
     },
 
     runFailureAssertions: function( scenario ){
+
+
+        let response = [];
+        let singlObjFromResp = {};
+        let statusCode;
+
+
+        it('Should make get call and save response', function( done ){
+            
+            const getParams = "?" + "sku="+ scenario.sku + "&zipcode=" + scenario.zipCode;
+            request( getParams, function( err, rsp ){
+                if( err ){
+                    console.log( err );
+                    done();
+                } else {
+                    response = rsp.body;
+                    statusCode = rsp.statusCode;
+                    done();
+                }
+            });
+        });
 
         let type = scenario.errorResponse.type ? scenario.errorResponse.type : "object";
         let errorObj = {};
