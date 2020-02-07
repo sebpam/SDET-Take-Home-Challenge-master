@@ -208,7 +208,7 @@ module.exports = {
         let type = scenario.errorResponse.type ? scenario.errorResponse.type : "object";
         let errorObj = {};
         let innerErrorObj = {};
-        this.submitGetRequest( scenario );
+        //this.submitGetRequest( scenario );
 
         if( scenario.errorResponse.type.toLowerCase() === "array" ){
 
