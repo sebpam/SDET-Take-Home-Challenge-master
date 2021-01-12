@@ -6,7 +6,7 @@ Sample Data driven NodeJs based automation suite leveraging the SupertestJs npm 
 
 ## Instructions
 
-1. Cloning this repository
+1. Clone this repository
 2. Run npm install
 3. Run test with the following command: npm run test
 
