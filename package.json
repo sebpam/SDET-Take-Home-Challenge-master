@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/starrett67/SDET-Take-Home-Challenge.git"
+    "url": "git+https://github.com/sebpam/Sample-Rest-API-Automaton-Suite.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/starrett67/SDET-Take-Home-Challenge/issues"
+    "url": "https://github.com/sebpam/Sample-Rest-API-Automaton-Suite/issues"
   },
-  "homepage": "https://github.com/starrett67/SDET-Take-Home-Challenge#readme",
+  "homepage": "https://github.com/sebpam/Sample-Rest-API-Automaton-Suite#readme",
   "devDependencies": {
     "mocha": "^6.2.2"
   },
